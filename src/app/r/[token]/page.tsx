@@ -2,37 +2,26 @@ import { supabase } from "@/lib/supabaseClient";
 
 import ReplyClient from "./ReplyClient";
 
-type Props = {
-  params: { token: string };
+type TokenParams = {
+  params: Promise<{ token: string }>;
 };
 
-type TokenRow = {
-  token: string;
-  used: boolean;
-  expires_at: string | null;
-  echo_id: string;
-};
+export default async function ReplyPage({ params }: TokenParams) {
+  const { token } = await params;
 
-type EchoRow = {
-  id: string;
-  prompt_text: string | null;
-  kind: string;
-  message_text: string | null;
-  audio_url: string | null;
-  created_at: string;
-};
+  console.log("Server token param:", token);
 
-export default async function ReplyPage({ params }: Props) {
-  const token = params.token;
-
-  // Step 1: Get the reply token row by token
-  const { data: tokenRow, error: tokenError } = await supabase
+  // 1) Look up the token row
+  const {
+    data: tokenRow,
+    error: tokenError,
+  } = await supabase
     .from("reply_tokens")
     .select("token, used, expires_at, echo_id")
     .eq("token", token)
     .maybeSingle();
 
-  console.log("Reply token row", tokenRow);
+  console.log("Reply token row:", tokenRow, tokenError);
 
   if (tokenError || !tokenRow) {
     return (
@@ -40,18 +29,17 @@ export default async function ReplyPage({ params }: Props) {
         <div className="max-w-sm text-center">
           <h1 className="text-xl font-semibold mb-2">Link not found</h1>
           <p className="text-sm text-textMuted">
-            This Echotag reply link is invalid or has expired. You can ask the sender
-            to send a new one.
+            This Echotag reply link is invalid or has expired. You can ask the
+            sender to send a new one.
           </p>
         </div>
       </main>
     );
   }
 
-  // Step 2: Check if the token is used or expired
   const expired =
-    tokenRow.expires_at !== null &&
-    new Date(tokenRow.expires_at).getTime() < Date.now();
+    !!tokenRow.expires_at &&
+    new Date(tokenRow.expires_at as string).getTime() < Date.now();
 
   if (tokenRow.used || expired) {
     return (
@@ -67,14 +55,17 @@ export default async function ReplyPage({ params }: Props) {
     );
   }
 
-  // Step 3: Fetch the echo row
-  const { data: echo, error: echoError } = await supabase
+  // 2) Look up the echo itself
+  const {
+    data: echo,
+    error: echoError,
+  } = await supabase
     .from("echoes")
     .select("id, prompt_text, kind, message_text, audio_url, created_at")
     .eq("id", tokenRow.echo_id)
     .maybeSingle();
 
-  console.log("Echo row", echo);
+  console.log("Echo row:", echo, echoError);
 
   if (echoError || !echo) {
     return (
@@ -82,15 +73,14 @@ export default async function ReplyPage({ params }: Props) {
         <div className="max-w-sm text-center">
           <h1 className="text-xl font-semibold mb-2">Link not found</h1>
           <p className="text-sm text-textMuted">
-            This Echotag reply link is invalid or has expired. You can ask the sender
-            to send a new one.
+            This Echotag reply link is invalid or has expired. You can ask the
+            sender to send a new one.
           </p>
         </div>
       </main>
     );
   }
 
-  // Step 4: Render ReplyClient
   return (
     <main className="min-h-[70vh] flex items-center justify-center">
       <ReplyClient token={token} echo={echo} />
