@@ -132,7 +132,20 @@ export default function HomePage() {
       </section>
 
       <footer className="text-[11px] text-textMuted/70">
-        Echotag is created by Bandit Innovations. Coming soon to iOS and Android.
+        <div className="mb-3">
+          Echotag is created by Bandit Innovations. Coming soon to iOS and Android.
+        </div>
+        <div className="flex flex-wrap items-center gap-4">
+          <a href="/privacy" className="hover:text-honey transition">
+            Privacy
+          </a>
+          <a href="/terms" className="hover:text-honey transition">
+            Terms
+          </a>
+          <a href="/support" className="hover:text-honey transition">
+            Support
+          </a>
+        </div>
       </footer>
     </main>
   );
