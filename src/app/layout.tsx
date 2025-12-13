@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,23 +17,28 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className="min-h-screen bg-gradient-to-b from-night to-nightSoft text-textMain">
+      <body className="min-h-screen bg-richCharcoal text-warmOffWhite">
         <div className="max-w-5xl mx-auto px-4 py-6 md:py-8">
           <header className="flex items-center justify-between mb-12 md:mb-16">
-            <div className="flex items-center gap-3">
-              <div className="text-lg font-semibold tracking-tight text-textMain">
-                Echotag
-              </div>
-            </div>
+            <Link href="/" className="flex items-center hover:opacity-80 transition">
+              <Image
+                src="/echotag_logo_text.png"
+                alt="Echotag"
+                width={313}
+                height={313}
+                className="w-[312.5px] h-[312.5px]"
+                priority
+              />
+            </Link>
 
-            <nav className="flex items-center gap-4 md:gap-6 text-sm text-textMuted">
-              <a href="#how-it-works" className="hover:text-honey transition">
+            <nav className="flex items-center gap-4 md:gap-6 text-sm text-warmOffWhite/80">
+              <a href="#how-it-works" className="hover:text-honeyGold transition">
                 How it works
               </a>
-              <a href="/privacy" className="hover:text-honey transition">
+              <a href="/privacy" className="hover:text-honeyGold transition">
                 Privacy
               </a>
-              <a href="/support" className="hover:text-honey transition">
+              <a href="/support" className="hover:text-honeyGold transition">
                 Support
               </a>
             </nav>
@@ -39,22 +46,22 @@ export default function RootLayout({
 
           {children}
 
-          <footer className="mt-20 md:mt-24 pt-8 border-t border-white/10">
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-sm text-textMuted/80">
+          <footer className="mt-20 md:mt-24 pt-8 border-t border-stoneGray/30">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-sm text-warmOffWhite/70">
               <div>
                 © {currentYear} Echotag
               </div>
               <div className="flex flex-wrap items-center gap-4">
-                <a href="/privacy" className="hover:text-honey transition">
+                <a href="/privacy" className="hover:text-honeyGold transition">
                   Privacy
                 </a>
-                <a href="/terms" className="hover:text-honey transition">
+                <a href="/terms" className="hover:text-honeyGold transition">
                   Terms
                 </a>
-                <a href="/support" className="hover:text-honey transition">
+                <a href="/support" className="hover:text-honeyGold transition">
                   Support
                 </a>
-                <a href="mailto:support@echotag.app" className="hover:text-honey transition">
+                <a href="mailto:support@echotag.app" className="hover:text-honeyGold transition">
                   support@echotag.app
                 </a>
               </div>

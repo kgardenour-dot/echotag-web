@@ -27,8 +27,8 @@ export default async function ReplyPage({ params }: TokenParams) {
     return (
       <main className="min-h-[70vh] flex items-center justify-center">
         <div className="max-w-sm text-center">
-          <h1 className="text-xl font-semibold mb-2">Link not found</h1>
-          <p className="text-sm text-textMuted">
+          <h1 className="text-xl font-semibold mb-2 text-warmOffWhite">Link not found</h1>
+          <p className="text-sm text-warmOffWhite/80">
             This Echotag reply link is invalid or has expired. You can ask the
             sender to send a new one.
           </p>
@@ -45,8 +45,8 @@ export default async function ReplyPage({ params }: TokenParams) {
     return (
       <main className="min-h-[70vh] flex items-center justify-center">
         <div className="max-w-sm text-center">
-          <h1 className="text-xl font-semibold mb-2">This echo is closed</h1>
-          <p className="text-sm text-textMuted">
+          <h1 className="text-xl font-semibold mb-2 text-warmOffWhite">This echo is closed</h1>
+          <p className="text-sm text-warmOffWhite/80">
             This reply link has already been used or has expired. If you still
             want to respond, just let the person who sent it know.
           </p>
@@ -71,8 +71,8 @@ export default async function ReplyPage({ params }: TokenParams) {
     return (
       <main className="min-h-[70vh] flex items-center justify-center">
         <div className="max-w-sm text-center">
-          <h1 className="text-xl font-semibold mb-2">Link not found</h1>
-          <p className="text-sm text-textMuted">
+          <h1 className="text-xl font-semibold mb-2 text-warmOffWhite">Link not found</h1>
+          <p className="text-sm text-warmOffWhite/80">
             This Echotag reply link is invalid or has expired. You can ask the
             sender to send a new one.
           </p>

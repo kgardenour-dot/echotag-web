@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-night text-textMain antialiased;
+  @apply bg-richCharcoal text-warmOffWhite antialiased;
 }
