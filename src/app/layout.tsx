@@ -31,7 +31,7 @@ export default function RootLayout({
               />
             </Link>
 
-            <nav className="flex items-center gap-4 md:gap-6 text-sm text-warmOffWhite/80">
+            <nav className="hidden md:flex items-center gap-4 md:gap-6 text-sm text-warmOffWhite/80">
               <a href="#how" className="hover:text-honeyGold transition">
                 How it works
               </a>
