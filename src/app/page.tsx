@@ -3,18 +3,18 @@ export default function HomePage() {
     <main className="pb-16">
       {/* Section 1: Hero */}
       <section className="mb-16 md:mb-24">
-        <div className="bg-deepSlateBlue rounded-2xl p-8 md:p-12 lg:p-16 text-warmOffWhite">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6 max-w-3xl">
+        <div className="bg-deepSlateBlue rounded-2xl p-8 md:p-12 lg:p-16 text-warmOffWhite text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6 max-w-3xl mx-auto md:mx-0">
             For the things you want to say,
             without making it a whole thing.
           </h1>
-          <p className="text-base md:text-lg text-warmOffWhite/90 mb-3 max-w-2xl leading-relaxed">
+          <p className="text-base md:text-lg text-warmOffWhite/90 mb-3 max-w-2xl leading-relaxed mx-auto md:mx-0">
             Send voice or text echoes to your partner, family, or friends. No scrolling. No pressure. Just moments.
           </p>
-          <p className="text-sm md:text-base text-warmOffWhite/70 mb-8 max-w-2xl">
+          <p className="text-sm md:text-base text-warmOffWhite/70 mb-8 max-w-2xl mx-auto md:mx-0">
             Made for couples, families, and close friends.
           </p>
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
             <a
               href="#get"
               className="rounded-full bg-terracotta text-white text-sm font-medium px-6 py-3 shadow-soft-card hover:bg-terracotta/90 transition"
@@ -33,15 +33,15 @@ export default function HomePage() {
 
       {/* Section 2: How it works (Explainer) */}
       <section id="how" className="mb-16 md:mb-24">
-        <div className="bg-stoneGray/20 border border-stoneGray/30 rounded-2xl p-8 md:p-10 lg:p-12">
+        <div className="bg-stoneGray/20 border border-stoneGray/30 rounded-2xl p-8 md:p-10 lg:p-12 text-center md:text-left">
           <p className="text-xs md:text-sm uppercase tracking-wider text-warmOffWhite/60 mb-6">
             How it works
           </p>
-          <p className="text-base md:text-lg text-warmOffWhite/90 max-w-[65ch] leading-relaxed mb-8">
+          <p className="text-base md:text-lg text-warmOffWhite/90 max-w-[65ch] leading-relaxed mb-8 mx-auto md:mx-0">
             Sometimes you want to flirt. Sometimes you want to ask something real. Sometimes you just want to say "this made me think of you."
             Echotag gives you a place for all of that, without the noise.
           </p>
-          <ul className="space-y-4 text-base md:text-lg text-warmOffWhite/80 leading-relaxed max-w-[65ch]">
+          <ul className="space-y-4 text-base md:text-lg text-warmOffWhite/80 leading-relaxed max-w-[65ch] mx-auto md:mx-0">
             <li>• Fun, flirty, or thoughtful notes to your partner</li>
             <li>• Check-in questions for family that don't feel like homework</li>
             <li>• Small moments with friends that don't belong in a group chat</li>
@@ -51,10 +51,10 @@ export default function HomePage() {
 
       {/* Section 3: FAQ */}
       <section id="faq" className="mb-16 md:mb-24">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-8 md:mb-10 text-warmOffWhite">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-8 md:mb-10 text-warmOffWhite text-center md:text-left">
           A few quick questions
         </h2>
-        <div className="space-y-4 max-w-[65ch]">
+        <div className="space-y-4 max-w-[65ch] mx-auto md:mx-0">
           <div className="bg-stoneGray/10 border border-stoneGray/20 rounded-xl p-6 md:p-8">
             <h3 className="text-base md:text-lg font-semibold text-warmOffWhite mb-3">
               Q: What is an Echo?
@@ -100,11 +100,11 @@ export default function HomePage() {
 
       {/* Section 4: Closing CTA */}
       <section id="get" className="mb-16 md:mb-24">
-        <div className="bg-deepSlateBlue/40 border border-deepSlateBlue/50 rounded-2xl p-10 md:p-12 lg:p-16">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-8 max-w-2xl text-warmOffWhite leading-tight">
+        <div className="bg-deepSlateBlue/40 border border-deepSlateBlue/50 rounded-2xl p-10 md:p-12 lg:p-16 text-center md:text-left">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-8 max-w-2xl text-warmOffWhite leading-tight mx-auto md:mx-0">
             Make space for the moments that matter.
           </h2>
-          <div className="flex flex-wrap items-center gap-4 mb-8">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mb-8">
             <a
               href="#get"
               className="rounded-full bg-terracotta text-white text-sm font-medium px-6 py-3 shadow-soft-card hover:bg-terracotta/90 transition"
@@ -118,7 +118,7 @@ export default function HomePage() {
               Support
             </a>
           </div>
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
             <button className="rounded-lg bg-stoneGray/30 border border-stoneGray/40 px-6 py-3 text-sm text-warmOffWhite/90 hover:border-honeyGold hover:text-honeyGold transition">
               iOS (coming soon)
             </button>
