@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-screen bg-richCharcoal text-warmOffWhite">
         <div className="max-w-5xl mx-auto px-4 py-6 md:py-8">
-          <header className="flex items-center justify-between mb-12 md:mb-16">
+          <header className="flex items-center justify-center md:justify-between mb-12 md:mb-16">
             <Link href="/" className="flex items-center hover:opacity-80 transition">
               <Image
                 src="/echotag_logo_text.png"
@@ -32,13 +32,13 @@ export default function RootLayout({
             </Link>
 
             <nav className="hidden md:flex items-center gap-4 md:gap-6 text-sm text-warmOffWhite/80">
-              <a href="#how" className="hover:text-honeyGold transition">
+              <a href="#how" className="hover:text-honeyGold transition focus:outline-none focus:ring-2 focus:ring-honeyGold/30 rounded px-1">
                 How it works
               </a>
-              <a href="/privacy" className="hover:text-honeyGold transition">
+              <a href="/privacy" className="hover:text-honeyGold transition focus:outline-none focus:ring-2 focus:ring-honeyGold/30 rounded px-1">
                 Privacy
               </a>
-              <a href="/support" className="hover:text-honeyGold transition">
+              <a href="/support" className="hover:text-honeyGold transition focus:outline-none focus:ring-2 focus:ring-honeyGold/30 rounded px-1">
                 Support
               </a>
             </nav>
@@ -52,16 +52,16 @@ export default function RootLayout({
                 © {currentYear} Echotag
               </div>
               <div className="flex flex-wrap items-center gap-4">
-                <a href="/privacy" className="hover:text-honeyGold transition">
+                <a href="/privacy" className="hover:text-honeyGold transition focus:outline-none focus:ring-2 focus:ring-honeyGold/30 rounded px-1">
                   Privacy
                 </a>
-                <a href="/terms" className="hover:text-honeyGold transition">
+                <a href="/terms" className="hover:text-honeyGold transition focus:outline-none focus:ring-2 focus:ring-honeyGold/30 rounded px-1">
                   Terms
                 </a>
-                <a href="/support" className="hover:text-honeyGold transition">
+                <a href="/support" className="hover:text-honeyGold transition focus:outline-none focus:ring-2 focus:ring-honeyGold/30 rounded px-1">
                   Support
                 </a>
-                <a href="mailto:support@echotag.app" className="hover:text-honeyGold transition">
+                <a href="mailto:support@echotag.app" className="hover:text-honeyGold transition focus:outline-none focus:ring-2 focus:ring-honeyGold/30 rounded px-1">
                   support@echotag.app
                 </a>
               </div>

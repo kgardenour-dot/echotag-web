@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Echotag Palette - Centralized color system */
+  --et-ink: #1F2937; /* richCharcoal - deep background */
+  --et-surface: #D1CFC7; /* stoneGray - card surface */
+  --et-surface-2: #A8B5A1; /* sageGreen - slightly elevated surface */
+  --et-text: #FAF7F2; /* warmOffWhite - primary text */
+  --et-muted: #8FA88E; /* mutedSage - secondary text */
+  --et-honey: #E8A838; /* honeyGold - warm highlight */
+  --et-terracotta: #D4745E; /* terracotta - warm accent */
+  --et-slate: #4A5F7F; /* deepSlateBlue - cool accent */
+  --et-moss: #A8B5A1; /* sageGreen - muted accent */
+  --et-border: #D1CFC7; /* stoneGray - soft border */
+}
+
 body {
-  @apply bg-richCharcoal text-warmOffWhite antialiased;
+  @apply text-warmOffWhite antialiased;
+  background: 
+    radial-gradient(ellipse at 20% 20%, rgba(232, 168, 56, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(212, 116, 94, 0.06) 0%, transparent 50%),
+    linear-gradient(180deg, #1F2937 0%, #2A3441 50%, #1F2937 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
 }
