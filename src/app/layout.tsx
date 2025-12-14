@@ -32,7 +32,7 @@ export default function RootLayout({
             </Link>
 
             <nav className="flex items-center gap-4 md:gap-6 text-sm text-warmOffWhite/80">
-              <a href="#how-it-works" className="hover:text-honeyGold transition">
+              <a href="#how" className="hover:text-honeyGold transition">
                 How it works
               </a>
               <a href="/privacy" className="hover:text-honeyGold transition">

@@ -1,6 +1,18 @@
+import Link from 'next/link';
+import BackButton from '../components/BackButton';
+
 export default function TermsPage() {
   return (
     <main className="pb-16">
+      <div className="flex items-center gap-4 mb-6">
+        <BackButton />
+        <Link
+          href="/"
+          className="text-sm text-warmOffWhite/80 hover:text-honeyGold transition underline underline-offset-4"
+        >
+          Home
+        </Link>
+      </div>
       <h1 className="text-3xl md:text-4xl font-semibold mb-6 text-terracotta">
         Terms of Service
       </h1>
